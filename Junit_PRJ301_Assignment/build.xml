@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Junit_PRJ301_Assignment_1" default="coverage-report" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
+    <description>Xây dựng, kiểm tra và chạy dự án BookShop với báo cáo coverage.</description>
+    
+    <!-- Nhập file build mặc định của NetBeans -->
+    <import file="nbproject/build-impl.xml"/>
+
+    <!-- Định nghĩa các tác vụ JaCoCo -->
+    <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+        <classpath>
+            <pathelement location="lib/jacocoant.jar"/>
+        </classpath>
+    </taskdef>
+
+    <!-- Tạo thư mục để lưu dữ liệu và báo cáo coverage -->
+    <target name="-pre-init">
+        <mkdir dir="build/jacoco"/>
+        <mkdir dir="build/reports/jacoco"/>
+    </target>
+
+    <!-- Chạy test với JaCoCo coverage -->
+    <target name="test-with-coverage" depends="init,compile-test">
+        <jacoco:coverage destfile="build/jacoco/test.exec">
+            <junit fork="yes" forkmode="perTest" printsummary="yes">
+                <classpath>
+                    <pathelement location="${build.test.classes.dir}"/>
+                    <pathelement location="${build.classes.dir}"/>
+                    <fileset dir="lib">
+                        <include name="*.jar"/> <!-- Bao gồm JUnit và các thư viện khác -->
+                    </fileset>
+                </classpath>
+                <formatter type="xml"/>
+                <batchtest todir="build/reports/jacoco">
+                    <fileset dir="${test.src.dir}">
+                        <include name="**/*Test.java"/>
+                    </fileset>
+                </batchtest>
+            </junit>
+        </jacoco:coverage>
+    </target>
+
+    <!-- Tạo báo cáo coverage -->
+    <target name="coverage-report" depends="test-with-coverage">
+        <jacoco:report>
+            <executiondata>
+                <file file="build/jacoco/test.exec"/>
+            </executiondata>
+            <structure name="BookShop Coverage">
+                <classfiles>
+                    <fileset dir="${build.classes.dir}"/>
+                </classfiles>
+                <sourcefiles encoding="UTF-8">
+                    <fileset dir="${src.dir}"/>
+                </sourcefiles>
+            </structure>
+            <html destdir="build/reports/jacoco"/>
+            <csv destfile="build/reports/jacoco/report.csv"/>
+        </jacoco:report>
+        <echo message="Báo cáo coverage đã được tạo tại build/reports/jacoco/index.html"/>
+    </target>
+
+    <!-- Ghi đè target mặc định để chạy toàn bộ quy trình -->
+    <target name="default" depends="coverage-report"/>
+</project>

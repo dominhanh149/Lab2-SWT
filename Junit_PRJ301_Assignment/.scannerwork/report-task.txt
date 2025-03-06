@@ -1,0 +1,6 @@
+projectKey=mhh
+serverUrl=http://localhost:9000
+serverVersion=10.5.1.90531
+dashboardUrl=http://localhost:9000/dashboard?id=mhh
+ceTaskId=809a7990-5ad8-4045-bfde-cff3b0daab51
+ceTaskUrl=http://localhost:9000/api/ce/task?id=809a7990-5ad8-4045-bfde-cff3b0daab51

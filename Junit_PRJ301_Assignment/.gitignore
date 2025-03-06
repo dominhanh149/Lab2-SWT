@@ -1,0 +1,18 @@
+# Ignore NetBeans project files
+nbproject/
+
+# Ignore build output
+build/
+dist/
+
+# Ignore IDE settings and workspace-specific files
+.idea/
+*.iml
+
+# Ignore compiled Java files
+*.class
+
+# Ignore logs
+*.log
+
+test/

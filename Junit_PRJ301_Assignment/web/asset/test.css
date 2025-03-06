@@ -1,0 +1,202 @@
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+.display {
+    display: inline-block;
+}
+
+.top {
+    height: 100px;
+    width: 100%;
+    background-color: #4a69bd;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+
+.body-left {
+    height: auto;
+    width: 73.6%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.body-right {
+    transform: translate(0px, -173px); /* Dịch chuyển 50px sang phải và 100px xuống dưới; */
+    height: auto;
+    width: 25.7%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.top-body-right {
+    height: 60px;
+    width: 100%;
+    background-color: #4a69bd;
+    border-radius: 10px 10px 0 0;
+}
+
+table.list-left {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.list-left tr {
+    height: 60px;
+}
+
+table.list-left th,
+table.list-left td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table.list-left th {
+    background-color: #f2f2f2;
+}
+
+table.list-right tr {
+    height: 60px;
+}
+
+table.list-right {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.list-right th,
+table.list-right td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table.list-right th {
+    background-color: #f2f2f2;
+}
+
+table.list-right td:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+table.list-left td:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+.navbar {
+    background-color: #002D72;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.toolbar {
+    padding: 20px;
+    background-color: #4a69bd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.create-btn {
+    background-color: #32CD32;
+}
+
+.progress-btn {
+    background-color: #3498db;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 40%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.task-list {
+    margin: 20px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th input[type="checkbox"], td input[type="checkbox"] {
+    margin: 0;
+}
+
+.activity-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.overdue {
+    background-color: red;
+}
+
+.deadline {
+    color: gray;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+select {
+    padding: 5px;
+}
+
+.content-right {
+    background-color: red;
+    width: 500px;
+}
+
