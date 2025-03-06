@@ -14,5 +14,3 @@ dist/
 
 # Ignore logs
 *.log
-
-test/
